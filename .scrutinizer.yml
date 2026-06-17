@@ -1,15 +1,12 @@
-build:
-    nodes:
-        analysis:
-            project_setup:
-                override:
-                    # 1. Forzamos a Scrutinizer a instalar las dependencias
-                    - composer install --no-dev --prefer-dist --optimize-autoloader
-            tests:
-                override:
-                    - php-scrutinizer-run
-                    
+tools:
+    php_analyzer: true
+
 filter:
     excluded_paths:
-        - 'vendor/*'  # 2. Le prohibimos perder el tiempo analizando Composer
-        - 'src/Db/*'   # Excluye tu base de datos SQLite si está en el repo
+        - 'vendor/*'
+
+# Dile a Scrutinizer que use el PHP pre-instalado en lugar de compilar
+build:
+    environment:
+        php:
+            version: '8.2' # Al poner '8.2' en lugar de '8.2.0', a veces usa la pre-compilada del contenedor

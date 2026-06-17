@@ -5,8 +5,13 @@ filter:
     excluded_paths:
         - 'vendor/*'
 
-# Dile a Scrutinizer que use el PHP pre-instalado en lugar de compilar
+# Say to Scrutinizer to use pre-installed PHP instead of compiling one
 build:
     environment:
         php:
-            version: '8.2' # Al poner '8.2' en lugar de '8.2.0', a veces usa la pre-compilada del contenedor
+            version: '8.2' 
+    nodes:
+    analysis:
+      tests:
+        override:
+          - php-scrutinizer-run

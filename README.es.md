@@ -1,30 +1,30 @@
 # Parina Framework
-### *Altiplano Edition: Less is more. The web framework for clear thinking.*
+### *Altiplano Edition: Menos es más. El web framework para pensar claro.*
 
-Parina is a micro-framework for web applications written in modern PHP.
-It doesn't try to do everything. It brings no magic. It hides no decisions.
+Parina es un micro–framework para aplicaciones web escrito en PHP moderno.
+No intenta hacerlo todo. No trae magia. No oculta decisiones.
 
-Its goal is simple:
+Su objetivo es simple:
 
-> **Provide only the essential pieces so every developer can build the rest with clarity.**
+> **Dar solo las piezas esenciales para que cada desarrollador construya el resto con claridad.**
 
-## 🌄 Philosophy
+## 🌄 Filosofía
 
-Parina proposes the opposite of excess:
+Parina propone lo contrario al exceso:
 
-- **Single Entry Point (Front Controller)**
-- **Explicit Router**
-- **Simple Dispatching Kernel**
-- **Handlers as minimum units of action**
-- **Lightweight Views**
-- **Clear Responses**
-- **Optional Infrastructure**
+- **Una entrada única (Front Controller)**
+- **Un router explícito**
+- **Un kernel simple que despacha**
+- **Handlers como unidades mínimas de acción**
+- **Vistas livianas**
+- **Responses claras**
+- **Infraestructura opcional**
 
-When there is less, **it looks better**.
+Cuando hay menos, **se ve mejor**.
 
-## 🧱 Architecture
+## 🧱 Arquitectura
 
-Parina is composed of decoupled elements:
+Parina se compone de elementos desacoplados:
 
 ```
 Handler           → contrato único
@@ -48,7 +48,7 @@ require 'vendor/autoload.php';
 
 $router = new Router();
 
-// Public routes
+// Rutas públicas
 $router->add('GET', '/', Parina\Modules\Public\HomeHandler::class);
 
 $kernel = new Kernel($router);
@@ -78,14 +78,14 @@ class HomeHandler implements Handler
 ## 🖼 Vista
 
 ```php
-<!-- Modules/Public/views/home.php -->
+<!-- Modules/Public/Views/home.php -->
 <h1><?= $title ?></h1>
 <p>Bienvenido a Parina Framework.</p>
 ```
 
 ## 🧪 Tests incluidos
 
-static-core está desarrollado con PHPUnit y pensado para coverage completo.
+Parina está desarrollado con PHPUnit y pensado para coverage completo.
 
 ```
 tests/

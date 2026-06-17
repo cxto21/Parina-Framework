@@ -1,127 +1,127 @@
-# Static-Core Manifesto  
-## *Altiplano Edition — Donde menos es más*
+# Parina Framework Manifesto  
+## *Altiplano Edition — Where less is more*
 
-static-core no es un framework completo.  
-No quiere serlo.  
-No pretende hacerlo todo.
+Parina is not a full-stack framework.  
+It doesn't want to be.  
+It doesn't pretend to do everything.
 
-Su propósito es más profundo:
+Its purpose is deeper:
 
-> **Liberar al desarrollador de la complejidad innecesaria.  
-> Volver a pensar. Volver a ver. Volver a decidir con claridad.**
-
----
-
-# 1. El silencio del altiplano
-
-En un mundo lleno de ruido —frameworks gigantes, capas ocultas, archivos generados, magia difícil de seguir—  
-static-core plantea una alternativa:
-
-**simplicidad extrema como acto de resistencia.**
-
-El altiplano está vacío a propósito.  
-Y por eso es hermoso.
+> **Freeing the developer from unnecessary complexity.  
+> To think again. To see again. To build with intention.**
 
 ---
 
-# 2. El core como herramienta, no como jaula
+# 1. The silence of the Altiplano
 
-static-core entrega solo lo esencial:
+In a world full of noise —giant frameworks, hidden layers, generated files, hard-to-follow magic—  
+Parina proposes an alternative:
 
-- un front controller  
-- un router explícito  
-- un kernel que despacha  
-- handlers independientes  
-- vistas simples  
-- responses claras  
+**extreme simplicity as an act of resistance.**
 
-Nada de modelos mágicos.  
-Nada de configuraciones ocultas.  
-Nada de convenciones incomprensibles.
-
-> **Si quieres más, constrúyelo tú.  
-> Así recuperas la autoría de tu propio código.**
+The Altiplano is empty on purpose.  
+And that is why it is beautiful.
 
 ---
 
-# 3. La responsabilidad vuelve a tus manos
+# 2. The core as a tool, not a cage
 
-Frameworks grandes resuelven tanto que te dejan sin criterio.  
-static-core no.
+Parina delivers only the essentials:
 
-Aquí, el desarrollador:
+- a front controller  
+- an explicit router  
+- a kernel that dispatches  
+- independent handlers  
+- simple views  
+- clear responses   
 
-- decide cómo acceder a la base de datos  
-- decide cómo modelar su dominio  
-- decide cómo estructurar sus carpetas  
-- decide cómo extender  
-- decide qué infraestructura necesita  
+No magic models.  
+No hidden configurations.  
+No incomprehensible conventions.
 
-Este framework no te infantiliza.  
-Te respeta.
+> **If you want more, build it yourself.  
+> That is how you reclaim authorship of your own code.**
 
 ---
 
-# 4. Todo lo que no está… es intencional
+# 3. Responsibility returns to your hands
 
-static-core NO incluye:
+Large frameworks solve so much that they leave you without judgment.  
+Parina Framework no.
+
+Here, the developer:
+
+- decides how to access the database  
+- decides how to model their domain  
+- decides how to structure their folders  
+- decides how to extend  
+- decides what infrastructure they need  
+
+This framework does not infantilize you.  
+It respects you.
+
+---
+
+# 4. Everything that isn't there... is intentional
+
+Parina Framework does NOT include:
 
 - ORM  
-- migraciones  
-- colas  
+- migrations  
+- queues  
 - caching  
-- plantillas complejas  
-- helpers mágicos  
+- complex templates  
+- magic helpers  
 - auto–scaffolding  
-- múltiples capas de transporte  
+- multiple transport layers  
 
-¿Es una carencia?
+Is it a shortcoming?
 
 No.  
-Es un recordatorio de que **puedes crear lo que realmente necesitas**.
+It is a reminder that **you can create what you actually need**.
 
 ---
 
-# 5. El código debe entrar en tu cabeza
+# 5. Code must fit in your head
 
-Un framework que no entiendes  
-es un framework que no controlas.
+A framework you don't understand  
+is a framework you don't control.
 
-static-core fue diseñado para caber:
+The architecture of Parina was designed to fit:
 
-- en una pizarra,  
-- en una servilleta,  
-- en tu mente.
+- on a whiteboard,  
+- on a napkin,  
+- in your mind.
 
-Si algo es demasiado complejo para explicarlo en 30 segundos…  
-no pertenece aquí.
-
----
-
-# 6. Desarrollo como acto creativo
-
-static-core no te entrega todo listo.  
-Te entrega el lienzo en blanco, los pinceles y la paleta.
-
-El artista eres tú.
+If something is too complex to explain in 30 seconds…  
+it doesn't belong here.
 
 ---
 
-# 7. La promesa final
+# 6. Development as a creative act
 
-> **"No te doy un framework para que programes más rápido.  
-> Te doy un framework para que programes mejor."**
+Parina Framework doesn't give you everything ready-made.  
+It gives you the blank canvas, the brushes, and the palette.
 
-Menos código.  
-Más claridad.  
-Más intención.  
-Más control.
-
-Ese es el espíritu de static-core.  
-Ese es el espíritu del altiplano:  
-vastedad, simplicidad, silencio…  
-y la libertad de construir lo esencial.
+The artist is you.
 
 ---
 
-**Fin del manifiesto.**  
+# 7. The final promise
+
+> **"I don't give you a framework to program faster.  
+> I give you a framework to program better."**
+
+Less code.  
+More clarity.  
+More intention.  
+More control.
+
+That is the spirit of Parina.  
+That is the spirit of the Altiplano:  
+vastness, simplicity, silence…  
+and the freedom to build what is essential.
+
+---
+
+**End of manifesto.**

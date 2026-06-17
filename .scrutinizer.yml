@@ -11,7 +11,7 @@ build:
         php:
             version: '8.2' 
     nodes:
-    analysis:
-      tests:
-        override:
-          - php-scrutinizer-run
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run

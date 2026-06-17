@@ -11,7 +11,7 @@ class Config
     {
         // Hash is executed ONLY the first time it's requested in the request lifecycle
         if (self::$cryptoKey === null) {
-            self::$cryptoKey = hash('sha256', 'AX18-12A.AaC4n7.@$%&@#_PinZeroSecret', true);
+            self::$cryptoKey = hash('sha256', 'AX18-12A.AaC4n7.@$%&@#_ParinaUltraSecret.', true);
         }
         return self::$cryptoKey;
     }
@@ -27,6 +27,11 @@ class Config
     public static function getTimeToLive(): int
     {
         return 60 * 30; // 30 minutes
+    }
+
+    public static function getMaxRequestSize(): int
+    {
+        return 1024 * 1024 * 5; // 10 MB
     }
 
     public static function allowSetup(): bool

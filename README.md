@@ -80,7 +80,7 @@ class HomeHandler implements Handler
 ```php
 <!-- Modules/Public/views/home.php -->
 <h1><?= $title ?></h1>
-<p>Bienvenido a Parina Framework.</p>
+<p>Welcome to Parina Framework.</p>
 ```
 
 ## 🧪 Tests included

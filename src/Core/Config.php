@@ -4,13 +4,13 @@ namespace Parina\Core;
 
 class Config
 {
-    private static ?string $cryptoKey = null;
-    private static ?string $dbPath = null;
+    private static string $cryptoKey = '';
+    private static string $dbPath = '';
 
     public static function getCryptoKey(): string
     {
         // Hash is executed ONLY the first time it's requested in the request lifecycle
-        if (self::$cryptoKey === null) {
+        if (self::$cryptoKey === '') {
             self::$cryptoKey = hash('sha256', 'AX18-12A.AaC4n7.@$%&@#_ParinaUltraSecret.', true);
         }
         return self::$cryptoKey;
@@ -18,7 +18,7 @@ class Config
 
     public static function getDbPath(): string
     {
-        if (self::$dbPath === null) {
+        if (self::$dbPath === '') {
             self::$dbPath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Db' . DIRECTORY_SEPARATOR . 'app.sqlite';
         }
         return self::$dbPath;

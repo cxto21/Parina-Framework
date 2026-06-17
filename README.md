@@ -27,12 +27,12 @@ When there is less, **it looks better**.
 Parina is composed of decoupled elements:
 
 ```
-Handler           → contrato único
-Router            → mapa URL → handler
-Kernel            → ejecuta el flujo
-Response          → representación de la salida
-View              → helper para plantillas PHP
-Session           → control explícito de sesión
+Handler           → unique contract
+Router            → mapping URL → handler
+Kernel            → dispatcher
+Response          → output representation
+View              → simple PHP templates
+Session           → session control
 ```
 
 Additional infrastructure (like database access) lives outside the core.
@@ -75,7 +75,7 @@ class HomeHandler implements Handler
 }
 ```
 
-## 🖼 Vista
+## 🖼 Views
 
 ```php
 <!-- Modules/Public/views/home.php -->
@@ -83,9 +83,9 @@ class HomeHandler implements Handler
 <p>Bienvenido a Parina Framework.</p>
 ```
 
-## 🧪 Tests incluidos
+## 🧪 Tests included
 
-static-core está desarrollado con PHPUnit y pensado para coverage completo.
+Parina framework has been tested using PHPUnit.
 
 ```
 tests/
@@ -95,43 +95,43 @@ tests/
  └── Handlers/FakeHandler.php
 ```
 
-## 🔒 Seguridad
+## 🔒 Security
 
-Incluye protección opcional mediante:
+Including optional security measures:
 
 - CSRF tokens
 - Same-Origin defense
-- Middlewares aplicables al kernel
+- Middlewares applicables on the kernel
 
-## 🗄 Infraestructura (opcional)
+## 🗄 Infraestructure
 
-En `Infrastructure/Db.php` se ofrece una capa simple para:
+You can check on `Shared/Infrastructure/Db.php` and you will get a simple layer to:
 
-- conectar
-- preparar queries
-- ejecutar comandos
+- connect to database
+- prepare queries
+- execute commands
 
-## 🧘 Por qué Parina Framework
+## 🧘 Why Parina Framework?
 
-Porque programar no es juntar librerías.  
-Programar es **pensar claro**.
+Because programming is not just putting libraries together.  
+Programming is **clear thinking**.
 
-Parina Framework existe para recordarnos que:
+Parina Framework exists to remind us that:
 
-> **Una aplicación web no necesita complicarse para ser potente.**
+> **A web application doesn't need to be complicated to be powerful.**
 
-## 🏃 Ejecutar el servidor
+## 🏃 Run the server
 
-Parina Framework funciona con el servidor embebido de PHP.  
-Para ponerlo a correr, solo ejecuta:
+Parina Framework works with the PHP built-in server.  
+To run it, simply execute:
 
 ```bash
 php -S localhost:8000 -t public
 ```
 
-## 📦 Instalación
+## 📦 Installation
 
-Pronto en Packagist.
+Packagist Soon.
 
 ## 🪶 Licencia
 

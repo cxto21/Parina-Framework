@@ -49,3 +49,6 @@ node_modules/
 # Ignore packed releases
 *.zip
 *.tar.gz
+
+# Database files
+src/Db/*.sqlite

@@ -71,9 +71,9 @@ class Kernel
         // Send body
         echo $result->getContent();
         
-        // it is a redirection, breaks the flow right here, right now
+        // it is a redirection — stop further processing by returning to caller
         if ($result->getStatus() >= 300 && $result->getStatus() < 400) {
-            exit;
+            return;
         }
     }
 }

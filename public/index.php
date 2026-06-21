@@ -18,12 +18,16 @@ require_once '../vendor/autoload.php';
 
 $router = new Router();
 
-// Public Routes
-$router->add('GET', '/',         Parina\Modules\Public\HomeHandler::class);
-$router->add('GET', '/about',    Parina\Modules\Public\AboutHandler::class);
-$router->add('GET', '/setup',    Parina\Modules\Public\SetupHandler::class);
-$router->add('GET', '/login',    Parina\Modules\Public\LoginFormHandler::class);
-$router->add('POST', '/login',    Parina\Modules\Public\LoginCheckHandler::class);
+// Public Routes (Loaded dynamically from config/routes.php)
+$publicRoutes = require '../config/routes.php';
+foreach ($publicRoutes as $route) {
+    $router->add(
+        $route['method'],
+        $route['path'],
+        $route['handler'],
+        $route['middleware'] ?? []
+    );
+}
 
 // Encrypted routes resolver based on (/do?=...)
 $hashResolver = new Parina\Core\HashResolver([

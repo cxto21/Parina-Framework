@@ -29,10 +29,7 @@ class SetupHandler implements Handler
             Db::init($sqliteAdapter);
 
             // Creating tables
-            // Just one long string for simplicity purpose
             $sqlTables = "
-            PRAGMA foreign_keys = ON;
-            
             CREATE TABLE IF NOT EXISTS company (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 dni TEXT NOT NULL UNIQUE,
@@ -49,7 +46,6 @@ class SetupHandler implements Handler
                 company_id INTEGER NOT NULL,
                 username TEXT NOT NULL UNIQUE,
                 password TEXT NOT NULL,
-                salt TEXT NOT NULL, 
                 email TEXT NOT NULL,
                 is_active INTEGER DEFAULT 1,
                 deleted INTEGER DEFAULT 0,
@@ -117,14 +113,12 @@ class SetupHandler implements Handler
                 $profileId = 1;
 
                 // Create 'admin' user (Password: 'admin123' using native password_hash with salt)
-                $salt = bin2hex(random_bytes(16));
-                $hashedPassword = password_hash( $salt . 'admin123', PASSWORD_BCRYPT);
+                $hashedPassword = password_hash( 'admin123', PASSWORD_BCRYPT);
                 Db::query(
-                    "INSERT INTO users (company_id, username, salt, password, email) VALUES (:company_id, :username, :salt, :password, :email)",
+                    "INSERT INTO users (company_id, username, password, email) VALUES (:company_id, :username, :salt, :password, :email)",
                     [
                         'company_id' => $companyId,
                         'username'   => 'admin',
-                        'salt' => $salt,
                         'password'   => $hashedPassword,
                         'email'      => 'admin@democompany.org'
                     ]

@@ -4,7 +4,7 @@ namespace Tests\Handlers;
 
 use PHPUnit\Framework\TestCase;
 use Parina\Core\Request;
-use \Parina\Modules\Public\AutoPurchaseHandler;
+use Parina\Modules\Public\AutoPurchaseHandler;
 
 class AutoPurchaseHandlerTest extends TestCase
 {

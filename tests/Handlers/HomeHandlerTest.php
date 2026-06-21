@@ -4,7 +4,7 @@ namespace Tests\Handlers;
 
 use PHPUnit\Framework\TestCase;
 use Parina\Core\Request;
-use \Parina\Modules\Public\HomeHandler;
+use Parina\Modules\Public\HomeHandler;
 
 class HomeHandlerTest extends TestCase
 {

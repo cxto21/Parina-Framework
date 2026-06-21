@@ -4,7 +4,7 @@ namespace Tests\Handlers;
 
 use PHPUnit\Framework\TestCase;
 use Parina\Core\Request;
-use \Parina\Modules\Public\LoginCheckHandler;
+use Parina\Modules\Public\LoginCheckHandler;
 
 class LoginCheckHandlerTest extends TestCase
 {

@@ -4,7 +4,7 @@ namespace Tests\Handlers;
 
 use PHPUnit\Framework\TestCase;
 use Parina\Core\Request;
-use \Parina\Modules\Public\SetupHandler;
+use Parina\Modules\Public\SetupHandler;
 
 class SetupHandlerTest extends TestCase
 {

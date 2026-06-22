@@ -13,8 +13,23 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 use Parina\Core\Router;
 use Parina\Core\Kernel;
+use Parina\Core\Config;
+use Parina\Shared\Infrastructure\Db;
+use Parina\Shared\Infrastructure\Adapters\SqliteAdapter;
+use Parina\Shared\Infrastructure\Adapters\MySqlAdapter;
+use Parina\Shared\Infrastructure\Adapters\PostgreSqlAdapter;
 
 require_once '../vendor/autoload.php';
+
+// Initialize Database connection globally
+$dbConfig = Config::getDbConfig();
+$driver = $dbConfig['driver'] ?? 'sqlite';
+$adapter = match ($driver) {
+    'mysql' => new MySqlAdapter($dbConfig),
+    'pgsql', 'postgres', 'postgresql' => new PostgreSqlAdapter($dbConfig),
+    'sqlite', default => new SqliteAdapter($dbConfig),
+};
+Db::init($adapter);
 
 $router = new Router();
 

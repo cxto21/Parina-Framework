@@ -2,19 +2,11 @@
 
 namespace Parina\Shared\Models;
 use Parina\Shared\Infrastructure\Db;
-use Parina\Shared\Infrastructure\Adapters\SqliteAdapter;
-use Parina\Core\Config;
 use Parina\Core\Session;
 
 class User extends BaseModel
 {
     protected static string $table = 'users';
-
-    public function __construct()
-    {
-        $sqliteAdapter = new SqliteAdapter(Config::getDbConfig());
-        Db::init($sqliteAdapter);
-    }
 
     // Custom SQL operation which is not a generic CRUD
     public function findByLoginName(string $login): ?array

@@ -33,7 +33,7 @@ class DbTest extends TestCase
         $this->assertEquals(" LIMIT 10 OFFSET 20", $adapter->getLimitSql(10, 20));
     }
 
-    public function test_mysql_adapter_limit_sql()
+    public function test_mysql_adapter_lifecycle()
     {
         // Instanciar usando sqlite::memory: para evitar lanzar error de conexión de MySQL
         $config = [
@@ -43,6 +43,18 @@ class DbTest extends TestCase
         ];
 
         $adapter = new MySqlAdapter($config);
+
+        // Crear una tabla temporal
+        $adapter->exec("CREATE TABLE IF NOT EXISTS test_table_mysql (id INTEGER PRIMARY KEY, val TEXT)");
+
+        // Insertar dato
+        $adapter->query("INSERT INTO test_table_mysql (val) VALUES (:val)", ['val' => 'hello_mysql']);
+
+        // Consultar dato
+        $stmt = $adapter->query("SELECT * FROM test_table_mysql WHERE val = :val", ['val' => 'hello_mysql']);
+        $result = $stmt->fetch();
+
+        $this->assertEquals('hello_mysql', $result['val']);
         $this->assertEquals(" LIMIT 30, 10", $adapter->getLimitSql(10, 30));
     }
 

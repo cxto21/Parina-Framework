@@ -147,6 +147,29 @@ class HomeHandler implements Handler
 
 ---
 
+## 🛠️ CLI Scaffolding (Geração de Código)
+
+O Parina inclui uma ferramenta de linha de comando para gerar rotas, manipuladores (handlers) e testes unitários a partir de um arquivo CSV.
+
+1. Defina suas rotas em um arquivo CSV (por exemplo, `routes.csv`):
+   ```csv
+   Method,Path,HandlerClass,Middlewares,Description
+   GET,/,Parina\Modules\Public\HomeHandler,,Página inicial
+   GET,/about,Parina\Modules\Public\AboutHandler,,Sobre nós
+   ```
+
+2. Execute a ferramenta de scaffolding:
+   ```bash
+   php bin/scaffold.php routes.csv
+   ```
+
+Isso criará automaticamente:
+* A configuração de rotas em `config/routes.php`.
+* As classes de manipuladores (Handlers) ausentes em `src/`.
+* Testes unitários básicos em `tests/Handlers/` para verificar seus manipuladores.
+
+---
+
 ## 🧪 Testes Incluídos
 
 O Parina é desenvolvido com PHPUnit, focando em cobertura completa.

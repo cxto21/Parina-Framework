@@ -72,7 +72,7 @@ Parina Framework does NOT include:
 - caching  
 - complex templates  
 - magic helpers  
-- auto–scaffolding  
+- magic/runtime auto–scaffolding (scaffolding is explicit via CLI)  
 - multiple transport layers  
 
 Is it a shortcoming?

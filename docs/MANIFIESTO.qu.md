@@ -1,6 +1,8 @@
 # Parina Llikachapa Qillqasqan  
 ## *Altiplano Edition — Maypichus pisilla aswan achka kan*
 
+🇺🇸 [English](../MANIFIESTO.md) | 🇪🇸 [Español](MANIFIESTO.es.md) | 🇫🇷 [Français](MANIFIESTO.fr.md) | 🇵🇹 [Português](MANIFIESTO.pt.md) | 🇮🇹 [Italiano](MANIFIESTO.it.md) | 🇩🇪 [Deutsch](MANIFIESTO.de.md) | 🇦ym [Aymara](MANIFIESTO.ay.md) | 🦙 **Quechua** | 🇨🇳 [简体中文](MANIFIESTO.zh.md) | 🇯🇵 [日本語](MANIFIESTO.ja.md)
+
 Parinaqa manam hunt'asqa llikachachu (full-stack).  
 Manam chay kaytachu munan.  
 Manam tukuy imatachu rurayta yachachikun.

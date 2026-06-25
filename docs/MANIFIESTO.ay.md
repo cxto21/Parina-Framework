@@ -1,6 +1,8 @@
 # Parina Framework Manifiesto  
 ## *Altiplano Edition — Kawkhantix juk'akiw juk'ampïki*
 
+🇺🇸 [English](../MANIFIESTO.md) | 🇪🇸 [Español](MANIFIESTO.es.md) | 🇫🇷 [Français](MANIFIESTO.fr.md) | 🇵🇹 [Português](MANIFIESTO.pt.md) | 🇮🇹 [Italiano](MANIFIESTO.it.md) | 🇩🇪 [Deutsch](MANIFIESTO.de.md) | 🇦ym **Aymara** | 🦙 [Quechua](MANIFIESTO.qu.md) | 🇨🇳 [简体中文](MANIFIESTO.zh.md) | 🇯🇵 [日本語](MANIFIESTO.ja.md)
+
 Parinaqa janiw mä taqpach llikachakiti (full-stack).  
 Janiw ukhamäñ munkiti.  
 Janiw taqi kuns lurañ atipkiti.

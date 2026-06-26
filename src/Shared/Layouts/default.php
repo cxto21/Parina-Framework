@@ -19,9 +19,9 @@ use Parina\Core\View;
             <a href="/login">Login</a>
         <?php endif; ?>
         <?php if (Auth::isLoggedIn()) : ?>
-            <a href="/do?r=<?= Cipher::encryptUrl('admin/home');?>">Admin</a>
-            <a href="/do?r=<?= Cipher::encryptUrl('admin/users');?>">Users</a>
-            <a href="/do?r=<?= Cipher::encryptUrl('logout');?>">Logout</a>
+            <a href="/admin/home/<?= Cipher::encryptUrl('admin/home');?>">Admin</a>
+            <a href="/admin/users/<?= Cipher::encryptUrl('admin/users');?>">Users</a>
+            <a href="/logout/<?= Cipher::encryptUrl('logout');?>">Logout</a>
         <?php endif; ?>
         <a href="/about">About</a>
     </nav>

@@ -26,9 +26,7 @@ class RateLimitTest extends TestCase
 
     public function test_blocks_request_when_exceeding_rate_limit()
     {
-        if (!defined('RATE_LIMIT_MS')) {
-            define('RATE_LIMIT_MS', 500);
-        }
+        \Parina\Core\Config::setRateLimitMs(500);
         $_SESSION['_pin_last_req'] = microtime(true); // Hace 0 milisegundos
 
         $request = new Request([], [], [], [], []);

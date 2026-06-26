@@ -14,8 +14,9 @@ class RateLimit implements Middleware
         $bypass = Session::get('_pin_bypass_limit');
         $last_request = Session::get('_pin_last_req') ?? 0;
         $current_time = microtime(true);
-        if (!$bypass && defined('RATE_LIMIT_MS') && RATE_LIMIT_MS > 0) {
-            if (($current_time - $last_request) < (RATE_LIMIT_MS / 1000)) {
+        $rateLimit = \Parina\Core\Config::getRateLimitMs();
+        if (!$bypass && $rateLimit > 0) {
+            if (($current_time - $last_request) < ($rateLimit / 1000)) {
                 return (new ErrorResponse('Too many requests. Please wait a momment and try again.', 429));
             }
         }

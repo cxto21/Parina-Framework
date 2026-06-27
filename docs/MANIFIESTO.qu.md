@@ -1,15 +1,15 @@
-# Parina Llikachapa Qillqasqan  
-## *Altiplano Edition — Maypichus pisilla aswan achka kan*
+# Parina Framework Manifiesto  
+## *Altiplano Edition — Maypichus pisi kachkan, chaypichus aswan kachkan*
 
 🇺🇸 [English](../MANIFIESTO.md) | 🇪🇸 [Español](MANIFIESTO.es.md) | 🇫🇷 [Français](MANIFIESTO.fr.md) | 🇵🇹 [Português](MANIFIESTO.pt.md) | 🇮🇹 [Italiano](MANIFIESTO.it.md) | 🇩🇪 [Deutsch](MANIFIESTO.de.md) | 🇦ym [Aymara](MANIFIESTO.ay.md) | 🦙 **Quechua** | 🇨🇳 [简体中文](MANIFIESTO.zh.md) | 🇯🇵 [日本語](MANIFIESTO.ja.md)
 
-Parinaqa manam hunt'asqa llikachachu (full-stack).  
+Parinaqa manam hunt'asqa Frameworkchu (full-stack).  
 Manam chay kaytachu munan.  
 Manam tukuy imatachu rurayta yachachikun.
 
 Chaypa munayninqa aswan ukhum:
 
-> **Ruraqta qasi ch'aranllakunamanta qispichiy.  
+> **Ruraqta mana necesitasqan sasachakuykunamanta qispichiy.  
 > Yapamanta yuyaymananapaq. Yapamanta qhawanapaq. Huk munaywan hatarichinapaq.**
 
 ---
@@ -19,9 +19,9 @@ Chaypa munayninqa aswan ukhum:
 Huk pachapi tukuy ch'aqwayllawan hunt'asqa —hatun llikachakuna, pakashqa patakuna, rurasqa qillqakuna, mana hap'iy atina layqakuna—  
 Parinaqa huk ñanta riqsichin:
 
-**anacha t'aqasqa ruray huk sinchi hatariykuna hina.**
+**aswan pisillawan ruray, huk sinchi sayapakuy hina.**
 
-Altiplanoqa yuyaypuni ch'usaqmi.  
+Altiplanoqa yachaspam ch'usaq kachkan.  
 Chayraykum ancha sumaq.
 
 ---
@@ -30,30 +30,30 @@ Chayraykum ancha sumaq.
 
 Parinaqa k'apak kaqkunallatam qun:
 
-- huk ñawpaq kamachina (front controller)  
-- huk qhananchasqa thakhi riqsichiq (router)  
-- huk chawpi kernel riq  
-- sapaq ruraqkuna (handlers)  
-- ch'usaq qhawarichiykuna (views)  
-- sut'i kutichiykuna (responses)  
+- huk front controller  
+- huk Router  
+- huk chawpi Kernel  
+- sapaq Handlers  
+- ch'usaq Views  
+- sut'i Responses  
 
 Manam layqasqa kaqkunachu.  
 Manam pakashqa allichaykunachu.  
 Manam mana hap'iy atina conventions nisqakunachu.
 
-> **Aswan munaspaykiqa, qampi rurakuy.  
-> Chaynam qillqasqaykita qampaq hap'ikapunki.**
+> **Aswan munaspaykiqa, qampuni rurakuy.  
+> Chaynam qillqasqaykita qampaq hap'ikunki.**
 
 ---
 
-# 3. Ruranaykiqa makinmanmi kutinpuq
+# 3. Qillqasqaykiqa makiykimanmi kutinpun
 
 Hatun llikachakunaqa tukuy imata allichanku, qantataq mana yuyayniyuqta saqisunki.  
 Parina Framework manam chay hinachu.
 
 Kaypi, ruraqqa:
 
-- base de datosman yaykuyta munan chayta kamachin  
+- Database yaykuyta munan chayta kamachin  
 - sut'inchaykunata munasqanman kamachin  
 - sapa qillqakuna thakhi mayman churanata kamachin  
 - thakhita yapayta munan chayta kamachin  
@@ -70,17 +70,17 @@ Parina Frameworkpi manam kanchu:
 
 - ORM  
 - migrations  
-- queues (suyana thakhikuna)  
+- queues  
 - caching  
 - ch'aqwa templates  
 - magic helpers  
-- magic/runtime auto–scaffolding (scaffolding nisqaqa CLI thakhiwanmi riqsin)  
+- magic/runtime auto-scaffolding (scaffolding nisqaqa CLI toolwanmi riqsin)  
 - askha thakhikuna  
 
 ¿Chayqa pantaychu?
 
 Manam.  
-Mä yuyachiyllam: **qamqa rurawaqmi kawkha kaqkunatachus necesitas chayllata**.
+Huk yuyariychayllam: **qamqa rurawaqmi imallatachus nesesitanki chayllata**.
 
 ---
 
@@ -91,9 +91,9 @@ manam chayta kamachiyta atinkichu.
 
 Parina uñachayninqa chaypaq rurasqam:
 
-- huk qillqana pirqapi (whiteboard),  
-- huk pichana sillupi (napkin),  
-- yuyayniykipi.
+- huk whiteboard patapi,  
+- huk napkin patapi,  
+- umaykipi.
 
 Sichus imapas 30 segundosllapi mana sut'inchay atinachu kanman…  
 manam kaypi kaqchu.
@@ -103,7 +103,7 @@ manam kaypi kaqchu.
 # 6. Hatariykunaqa sumaq ruray hinam
 
 Parina Framework manam tukuy imata rurasqatachu qusunki.  
-Ch'usaq p'achata qusunki, llimphichanakunata, ukat sumaq llimphikunata.
+Ch'usaq llimphina p'achatami qusunki, llimphinakunatapas, sumaq llimphikunatapas.
 
 Llimphiqqa qammi kanki.
 
@@ -111,18 +111,18 @@ Llimphiqqa qammi kanki.
 
 # 7. Qhipa nisqa
 
-> **"Manam huk llikachatachu quyki jank'aqllata qillqanaykipaq.  
+> **"Manam huk llikachatachu quyki utqayllata qillqanaykipaq.  
 > Huk llikachatam quyki aswan sumaqta qillqanaykipaq."**
 
 Pisilla qillqasqa.  
 Aswan sut'inchasqa.  
 Aswan yuyaywan.  
-Aswan p'iqiñchawi.
+Aswan allin yuyaywan.
 
 Chaymi Parina sunqunqa.  
 Altiplano ch'inyaynin hina:  
 hatun pampakuna, ch'usaq ruraykuna, ch'inyay…  
-ukat sumaq qispichiy kawkha kaqkunalla necesitas chayta.
+hinaspa sumaq qispichiy, imallatachus nesesitanki chayllata.
 
 ---
 

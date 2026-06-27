@@ -4,35 +4,35 @@
 
 🇺🇸 [English](../README.md) | 🇪🇸 [Español](README.es.md) | 🇫🇷 [Français](README.fr.md) | 🇵🇹 [Português](README.pt.md) | 🇮🇹 [Italiano](README.it.md) | 🇩🇪 [Deutsch](README.de.md) | 🇦ym [Aymara](README.ay.md) | 🦙 **Quechua** | 🇨🇳 [简体中文](README.zh.md) | 🇯🇵 [日本語](README.ja.md)
 
-### *Altiplano Edition: Maypichus pisilla aswan achka kan. Sumaq php ruranapaq.*
+### *Altiplano Edition: Maypichus pisi kachkan, chaypichus aswan kachkan. Sumaq PHP ruranapaq.*
 
 ---
 
 ## 💡 ¿Imataq Parina?
 
-Parinaqa huk huch'uy llikacham (micro-framework) k'apak php ruranakuna hatarichinapaq. Chayqa k'apak thakhillatam qun ruranaykita sumaqta, sut'ita, ukat jank'ata apanaykipaq.
+Parinaqa huk huch'uy Framework (micro-framework) k'apak PHP ruranakuna hatarichinapaq. Chayqa k'apak thakhillatam qun ruranaykita sumaqta, sut'ita, hinaspa utqaylla apanaykipaq.
 
 ---
 
 ## 🌄 Filosofía
 
-**Sut'i kaqkuna aswan ch'aqwamanta. Tukuy allichay makinpi aswan allinchasqamanta.**
+**Sut'i kaqqa ch'aqwamanta aswan allinmi. Tukuy makinpi hap'iyqa layqakuymanta aswan allinmi.**
 
 Parina sunqunqa:
-* **Sut'inchasqa ruray:** Manam layqasqachu, manam pakashqa kawsaykunachu.
-* **Pisilla overhead:** Sapa byte ukat sapa millisecond valenmi.
+* **Sut'i ruray:** Manam layqakunachu, manam pakashqa lifecycle llikachakunachu.
+* **Pisilla Overhead:** Sapa byte sapa millisecond-pas chaniyuqmi.
 * **Yachasqa thakhi:** Chay rikusqaykillam apakun.
 
 ---
 
 ## 🧱 Uñachaynin 10 siq'ipi
 
-1. Huk request yaykun huk front controller nisqaman.
-2. Chayqa middleware pipeline thakhita purin.
-3. Middlewareqa yaykuchiqta saqinman utaq wisq'anman.
-4. Riqsisqa handler nisqaman chayan.
+1. Huk Request yaykun front controller nisqaman.
+2. Chayqa Middleware Pipeline thakhita purin.
+3. Middlewareqa Request yaykuchiqta saqinman utaq sayachinman.
+4. Riqsisqa Handler nisqaman chayan.
 5. Handlerqa rurananta apan.
-6. Huk standard response nisqata kutichin.
+6. Huk standard Response nisqata kutichin.
 7. Manam ch'aqwa layqakunachu.
 8. Manam pakashqa lifecycle llikachakunachu.
 9. Manam mana allin abstract kaqkunachu.
@@ -40,20 +40,20 @@ Parina sunqunqa:
 
 ---
 
-## 🔄 Request Lifecycle (Mañakuypa Kawsaynin)
+## 🔄 Request Lifecycle
 
 ```
-[ Request ] ───> [ Pipeline de Middlewares ] ───> [ Handler ]
-                             │                          │
-                             │ (Response kutichin)      │ (Response kutichin)
-                             ▼                          ▼
-                       [ Response ] <───────────────────┘
+[ Request ] ───> [ Middleware Pipeline ] ───> [ Handler ]
+                             │                         │
+                             │ (Response kutichin)     │ (Response kutichin)
+                             ▼                         ▼
+                       [ Response ] <──────────────────┘
 ```
 
 ### Middleware Uñachaynin
-Sapa middleware layer kay kamachiyta purin:
-* **`Response` kutichin** → Rurayta sayachin ukat kutichiyta apan.
-* **`null` kutichin** → Qhipa thakhiman ruranapaq saqin.
+Sapa Middleware layer kay kamachiyta purin:
+* **`Response` kutichin** → Llamk'ayta sayachin hinaspa Response kutichin.
+* **`null` kutichin** → Qhipa layer thakhiru rinanpaq saqin.
 
 #### Middleware uñachaynin
 ```php
@@ -71,16 +71,16 @@ class SimpleAuth implements Middleware
         if (!isset($_SESSION['user'])) {
             return new ErrorResponse("Manam qispiyaychu", 401);
         }
-        return null; // Qhipaman rinanpaq saqin
+        return null; // Qhipa layer thakhiru rinanpaq saqin
     }
 }
 ```
 
 ---
 
-## 🔒 Jach'anchasqa (Security)
+## 🔒 Amachay (Security)
 
-Jach'anchasqa kaqkunataqa sumaqtam uñachakun sapa middleware pipeline thakhipi:
+Amachaypaq kaqkunataqa sumaqtam rikukun sapa Middleware Pipeline thakhipi:
 
 * Rate limiting
 * Request size validation
@@ -91,17 +91,17 @@ Jach'anchasqa kaqkunataqa sumaqtam uñachakun sapa middleware pipeline thakhipi:
 
 ---
 
-## ⚡ Performance (Ruraynin)
+## ⚡ Performance
 
-Huch'uy overhead ukat microsecond k'apaklla rurana:
+Huch'uy Overhead ukat microsecond k'apaklla rurana:
 
-* **~0.0007 seconds** sapa mañakuypi.
+* **~0.0007 seconds** sapa Request kaqpi.
 * **~0.05 MB** RAM llasaynin.
 * Opcache friendly nisqa.
 
 ---
 
-## 🚀 Qallariynin (Bootstrapping)
+## 🚀 Bootstrapping
 
 ```php
 // public/index.php
@@ -142,14 +142,14 @@ class HomeHandler implements Handler
 ```php
 <!-- Modules/Public/Views/home.php -->
 <h1><?= $title ?></h1>
-<p>Parina Llikachaman allin hamusqa kanki.</p>
+<p>Parina Frameworkman allillam hamurqunki.</p>
 ```
 
 ---
 
-## 🛠️ CLI Scaffolding (Código ruraq)
+## 🛠️ CLI Scaffolding
 
-Parina llikachapiqa kanmi huk CLI thakhi routes, handlers, ukat pruebas basicas CSV qillqamanta ruranapaq.
+Parinaqa kanmi huk CLI Scaffolding tool, routes, handlers, pruebas basicas-pas CSV qillqamanta ruranapaq.
 
 1. Routes qillqata CSVpi allichay (e.g. `routes.csv`):
    ```csv
@@ -158,7 +158,7 @@ Parina llikachapiqa kanmi huk CLI thakhi routes, handlers, ukat pruebas basicas 
    GET,/about,Parina\Modules\Public\AboutHandler,,About us
    ```
 
-2. Scaffolding tool nisqata apachiy:
+2. CLI Scaffolding tool nisqata apachiy:
    ```bash
    php bin/scaffold.php routes.csv
    ```
@@ -188,16 +188,16 @@ tests/
 
 Tukuy ch'aqwaqa mana allin ch'amapaqmi. Parinaqa tapukunmi:
 
-¿Ima huch'uy llikacharaq allinta, jank'ata ukat jach'anchasqata rurakunman?
+¿Ima huch'uy llikacharaq allinta, utqaylla, amachasqata-pas rurakunman?
 
-Parinaqa manam huch'uyllachu pisillapaq. Amtapuni k'apak allichasqa. Churaqkuna p'itiy ruranakunatam qispichin.
+Parinaqa manam huch'uyllachu pisillapaq. Yuyaypi k'apak allichasqam. Ruraqkunamanmi ch'ampayta qun allin yuyaywan hatarichinankupaq.
 
 ---
 
 ## 📦 Deployment & Installation
 
 ### Production Deployment
-Allichaymanta, permisokunamanta, uñachay [DEPLOY.md](../DEPLOY.md).
+Allichaymanta, permisokunamanta, uñachay [DEPLOY.qu.md](DEPLOY.qu.md).
 
 ### Quick Start / Local Installation
 
@@ -211,7 +211,7 @@ php -S localhost:8000 -t public
 ```
 
 ### Dependency Manager
-Packagist pisi tiempollapi.
+Packagist pisi tiempollapi jamunqa.
 
 ---
 

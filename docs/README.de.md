@@ -199,6 +199,9 @@ Parina ist nicht aus Mangel minimal. Es ist mit Absicht minimal. Es entfernt all
 ### Bereitstellung in der Produktion
 Für Verzeichnislayout, Berechtigungen und Produktionstipps siehe [DEPLOY.de.md](DEPLOY.de.md).
 
+### Bereinigung & Zurücksetzen
+Um alle Demo-Dateien zu entfernen und das Framework zurückzusetzen, siehe [CLEANUP.de.md](CLEANUP.de.md).
+
 ### Schnellstart / Lokale Installation
 
 So führen Sie das Framework lokal mit dem integrierten PHP-Entwicklungsserver aus:

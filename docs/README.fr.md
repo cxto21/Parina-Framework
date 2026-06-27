@@ -199,6 +199,9 @@ Parina n'est pas minimaliste par limitation. Il est minimaliste par intention. I
 ### Déploiement en production
 Pour la disposition des répertoires, les permissions et les conseils de production, voir [DEPLOY.fr.md](DEPLOY.fr.md).
 
+### Nettoyage & Réinitialisation
+Pour supprimer tous les fichiers de démonstration et réinitialiser le framework, consultez [CLEANUP.fr.md](CLEANUP.fr.md).
+
 ### Démarrage rapide / Installation locale
 
 Pour exécuter le framework localment à l'aide du serveur de développement intégré de PHP :

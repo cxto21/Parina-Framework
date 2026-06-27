@@ -199,6 +199,9 @@ Parina is not minimal by limitation. It is minimal by intention. It removes ever
 ### Production Deployment
 For directory layout, permissions, and production tips, see [DEPLOY.md](DEPLOY.md).
 
+### Cleanup & Reset
+To remove all demo files and reset the framework to a fresh state, see [CLEANUP.md](CLEANUP.md).
+
 ### Quick Start / Local Installation
 
 To run the framework locally using PHP's built-in development server:

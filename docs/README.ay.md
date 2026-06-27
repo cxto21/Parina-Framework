@@ -199,6 +199,9 @@ Parinaqa janiw juk'akiti pisichawitaki. Amtapuni phiskhu uñch'ukita. Mayjt'ayi 
 ### Production Deployment
 Yaqha thakhinaka, uñachayirinaka, uñt'asna [DEPLOY.md](../DEPLOY.md).
 
+### Phiskhuwi ukat Wasitat Amtäwi
+Taqi demo qillqanaka chhaqtayañataki ukat llikacharu wasitat amtayañataki, uñachaña [CLEANUP.ay.md](CLEANUP.ay.md).
+
 ### Quick Start / Local Installation
 
 Local thakhin php server taypi lurayiri:

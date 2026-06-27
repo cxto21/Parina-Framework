@@ -199,6 +199,9 @@ Parinaqa manam huch'uyllachu pisillapaq. Yuyaypi k'apak allichasqam. Ruraqkunama
 ### Production Deployment
 Allichaymanta, permisokunamanta, uñachay [DEPLOY.qu.md](DEPLOY.qu.md).
 
+### Cleanup & Reset (Demo pichay)
+Tukuy demo p'anqakuna pichanapaq, uñachay [CLEANUP.qu.md](CLEANUP.qu.md).
+
 ### Quick Start / Local Installation
 
 PHP serverwan ruranaykita qallarinapaq:

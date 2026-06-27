@@ -199,6 +199,9 @@ O Parina não é minimalista por limitação. É minimalista por intenção. Ele
 ### Implantação em Produção
 Para layout de diretórios, permissões e dicas de produção, consulte [DEPLOY.pt.md](DEPLOY.pt.md).
 
+### Limpeza e Reinicialização
+Para remover todos os arquivos de demonstração e redefinir o framework, consulte [CLEANUP.pt.md](CLEANUP.pt.md).
+
 ### Início Rápido / Instalação Local
 
 Para executar o framework localmente usando o servidor de desenvolvimento embutido do PHP:

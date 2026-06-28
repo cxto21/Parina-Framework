@@ -17,14 +17,18 @@ class PostgreSqlAdapter implements DatabaseAdapter
 
     private function getPdo(): PDO
     {
-        if ($this->pdo === null) {
-            // En Postgres, el DSN suele ser 'pgsql:host=...;dbname=...;port=5432'
-            $this->pdo = new PDO($this->config['dsn'], $this->config['user'], $this->config['pass']);
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->pdo->setAttribute(PDO::ATTR_PERSISTENT, true);
-            $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        if ($this->pdo instanceof PDO) {
+            return $this->pdo;
         }
-        return $this->pdo;
+
+        // En Postgres, el DSN suele ser 'pgsql:host=...;dbname=...;port=5432'
+        $pdo = new PDO($this->config['dsn'], $this->config['user'], $this->config['pass']);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_PERSISTENT, true);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $this->pdo = $pdo;
+        return $pdo;
     }
 
     public function query(string $sql, array $params = []): \PDOStatement

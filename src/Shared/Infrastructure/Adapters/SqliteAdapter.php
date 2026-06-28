@@ -17,23 +17,27 @@ class SqliteAdapter implements DatabaseAdapter
 
     private function getPdo(): PDO
     {
-        if ($this->pdo === null) {
-            // En SQLite, el DSN suele ser "sqlite:/ruta/al/archivo.db" o "sqlite::memory:"
-            $this->pdo = new PDO($this->config['dsn'], null, null, $this->config['params'] ?? []);
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-            // Performance optimizations for SQLite3
-            $this->pdo->exec('PRAGMA journal_mode = WAL');           // Write-Ahead Logging
-            $this->pdo->exec('PRAGMA synchronous = NORMAL');         // Balanced speed/safety
-            $this->pdo->exec('PRAGMA cache_size = -64000');          // 64MB cache
-            $this->pdo->exec('PRAGMA temp_store = MEMORY');          // Use RAM for temp
-            $this->pdo->exec('PRAGMA mmap_size = 30000000');         // Memory-mapped I/O
-            $this->pdo->exec('PRAGMA page_size = 4096');             // Page size
-            $this->pdo->exec('PRAGMA busy_timeout = 5000');         // 5s timeout  
-            $this->pdo->exec('PRAGMA foreign_keys = ON');           // Enable foreign key support   
+        if ($this->pdo instanceof PDO) {
+            return $this->pdo;
         }
-        return $this->pdo;
+
+        // En SQLite, el DSN suele ser "sqlite:/ruta/al/archivo.db" o "sqlite::memory:"
+        $pdo = new PDO($this->config['dsn'], null, null, $this->config['params'] ?? []);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        // Performance optimizations for SQLite3
+        $pdo->exec('PRAGMA journal_mode = WAL');           // Write-Ahead Logging
+        $pdo->exec('PRAGMA synchronous = NORMAL');         // Balanced speed/safety
+        $pdo->exec('PRAGMA cache_size = -64000');          // 64MB cache
+        $pdo->exec('PRAGMA temp_store = MEMORY');          // Use RAM for temp
+        $pdo->exec('PRAGMA mmap_size = 30000000');         // Memory-mapped I/O
+        $pdo->exec('PRAGMA page_size = 4096');             // Page size
+        $pdo->exec('PRAGMA busy_timeout = 5000');         // 5s timeout  
+        $pdo->exec('PRAGMA foreign_keys = ON');           // Enable foreign key support   
+
+        $this->pdo = $pdo;
+        return $pdo;
     }
 
     public function query(string $sql, array $params = []): \PDOStatement

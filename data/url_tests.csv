@@ -1,0 +1,5 @@
+Method,Path,ExpectedStatus,ContainsText,Payload
+GET,/,200,Parina,
+GET,/about,200,about,
+GET,/login,200,login,
+GET,/non-existent-page,404,Not Found,

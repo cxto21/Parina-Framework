@@ -44,10 +44,6 @@ class CsvSeeder
                 continue;
             }
 
-            $columns = array_keys($data);
-            $placeholders = implode(', ', array_map(static fn($column) => ':' . $column, $columns));
-            $columnList = implode(', ', $columns);
-
             BaseModel::createIntoTable($table, $data);
             $inserted++;
         }

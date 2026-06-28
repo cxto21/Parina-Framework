@@ -14,7 +14,7 @@ php bin/cleanup.php
 3. **Demo Views pichan**: `about.php` hinaspa `login.php` p'anqakunata `src/Modules/Public/Views/` ukhumanta pichan.
 4. **Demo Tests pichan**: `tests/Handlers/` ukhupi kaq pruebakunata pichan.
 5. **Database pichan**: SQLite Database `src/Db/app.sqlite` p'anqata pichan.
-6. **Routes wasitat allichan**: `config/routes.php` p'anqata qillqan, chaypi `/` hinaspa `/setup` routesllata saqispa.
+6. **Routes wasitat allichan**: `config/routes.php` p'anqata qillqan, chaypi `/` hinaspa `/setup` routesllata saqispa, hinaspa `routes.csv` p'anqatapas pichan hawankunallata saqispa.
 
 ### Uñachaynin sayachinapaq (Confirmación pasay)
 Confirmación tapukuyta pasachinapaq:

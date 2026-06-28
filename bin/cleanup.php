@@ -20,7 +20,7 @@ if (!$force) {
     echo "- src/Modules/Public/Views/about.php, login.php\n";
     echo "- tests/Handlers/ (Demo handler test files)\n";
     echo "- src/Db/app.sqlite (if exists)\n";
-    echo "And reset config/routes.php to a pristine state.\n\n";
+    echo "And reset config/routes.php and routes.csv to a pristine state.\n\n";
     echo "Are you sure you want to proceed? (yes/no) [no]: ";
 
     $handle = fopen("php://stdin", "r");
@@ -141,5 +141,12 @@ PHP;
 
 file_put_contents($routesFile, $pristineRoutes);
 echo "Reset: config/routes.php\n";
+
+// 7. Reset routes.csv
+$routesCsvFile = $projectRoot . '/routes.csv';
+if (file_exists($routesCsvFile)) {
+    file_put_contents($routesCsvFile, "Method,Path,HandlerClass,Middlewares,Description\n");
+    echo "Reset: routes.csv\n";
+}
 
 echo "\n✨ Cleanup complete! Parina Framework is now a fresh, empty canvas.\n";

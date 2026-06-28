@@ -14,7 +14,7 @@ php bin/cleanup.php
 3. **Removes Demo Views**: Deletes `about.php` and `login.php` in `src/Modules/Public/Views/`.
 4. **Removes Demo Tests**: Deletes test suites in `tests/Handlers/` associated with the removed handlers.
 5. **Removes Database**: Deletes the local SQLite database file `src/Db/app.sqlite`.
-6. **Resets Routes**: Overwrites `config/routes.php` to contain only `/` and `/setup`.
+6. **Resets Routes**: Overwrites `config/routes.php` to contain only `/` and `/setup`, and resets `routes.csv` to leave only the header.
 
 ### Automation (Skip confirmation)
 To skip the confirmation prompt:

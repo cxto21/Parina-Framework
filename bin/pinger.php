@@ -2,8 +2,8 @@
 <?php
 
 if ($argc < 2) {
-    echo "Uso: php bin/pinger.php <csv_file> [base_url] [global_headers]\n";
-    echo "Ejemplo: php bin/pinger.php data/url_tests.csv http://localhost:4000 \"Authorization: Bearer token123|X-Api-Key: xyz\"\n";
+    echo "Usage: php bin/pinger.php <csv_file> [base_url] [global_headers]\n";
+    echo "Example: php bin/pinger.php data/url_tests.csv http://localhost:4000 \"Authorization: Bearer token123|X-Api-Key: xyz\"\n";
     exit(1);
 }
 
@@ -13,24 +13,24 @@ $baseUrl = rtrim($baseUrl, '/');
 $globalHeadersArg = $argv[3] ?? '';
 
 if (!file_exists($csvFile)) {
-    fwrite(STDERR, "\e[31mError: El archivo CSV no existe: {$csvFile}\e[0m\n");
+    fwrite(STDERR, "\e[31mError: The CSV file does not exist: {$csvFile}\e[0m\n");
     exit(1);
 }
 
 $file = fopen($csvFile, 'r');
 if (!$file) {
-    fwrite(STDERR, "\e[31mError: No se pudo abrir el archivo CSV: {$csvFile}\e[0m\n");
+    fwrite(STDERR, "\e[31mError: Could not open the CSV file: {$csvFile}\e[0m\n");
     exit(1);
 }
 
 $headers = fgetcsv($file);
-// Verificar si la primera línea es el encabezado real
+// Check if the first line is the actual header
 if ($headers && strtolower($headers[0]) !== 'method') {
-    // Si no es un encabezado (no empieza por 'method'), regresar el puntero al inicio
+    // If it is not a header (doesn't start with 'method'), rewind the file pointer to the beginning
     rewind($file);
 }
 
-// Parsear cabeceras globales
+// Parse global headers
 $globalHeaders = [];
 if ($globalHeadersArg !== '') {
     $parts = explode('|', $globalHeadersArg);
@@ -46,11 +46,11 @@ $total = 0;
 $passed = 0;
 $failed = 0;
 
-echo "\n\e[33m--- Ejecutando pruebas de URL con Pinger ---\e[0m\n";
-echo "Archivo CSV: {$csvFile}\n";
-echo "URL Base:    {$baseUrl}\n";
+echo "\n\e[33m--- Running URL Tests with Pinger ---\e[0m\n";
+echo "CSV File: {$csvFile}\n";
+echo "Base URL: {$baseUrl}\n";
 if (!empty($globalHeaders)) {
-    echo "Cabeceras:   " . implode(', ', $globalHeaders) . "\n";
+    echo "Headers:  " . implode(', ', $globalHeaders) . "\n";
 }
 echo "\n";
 
@@ -72,13 +72,13 @@ while (($row = fgetcsv($file)) !== false) {
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false); // No seguir redirecciones para poder validar códigos 3xx
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false); // Do not follow redirects to allow validation of 3xx codes
     curl_setopt($ch, CURLOPT_TIMEOUT, 10);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
     curl_setopt($ch, CURLOPT_USERAGENT, 'Parina-Pinger/1.0');
 
-    // Configurar cabeceras (globales + payload)
+    // Configure headers (global + payload)
     $httpHeaders = $globalHeaders;
     if ($payload !== '') {
         $httpHeaders[] = 'Content-Type: application/json';
@@ -99,7 +99,7 @@ while (($row = fgetcsv($file)) !== false) {
 
     if ($response === false) {
         $failed++;
-        echo "\e[31mFALLÓ\e[0m (Error de conexión/cURL: {$error})\n";
+        echo "\e[31mFAILED\e[0m (Connection/cURL Error: {$error})\n";
         continue;
     }
 
@@ -114,14 +114,14 @@ while (($row = fgetcsv($file)) !== false) {
         $passed++;
         echo "\e[32mOK\e[0m (Status: {$statusCode}";
         if ($containsText !== '') {
-            echo ", Contiene: '{$containsText}'";
+            echo ", Contains: '{$containsText}'";
         }
         echo ")\n";
     } else {
         $failed++;
-        echo "\e[31mFALLÓ\e[0m (Status Obtenido: {$statusCode}, Esperado: {$expectedStatus}";
+        echo "\e[31mFAILED\e[0m (Received Status: {$statusCode}, Expected: {$expectedStatus}";
         if (!$textMatches) {
-            echo " | No contiene el texto esperado: '{$containsText}'";
+            echo " | Does not contain expected text: '{$containsText}'";
         }
         echo ")\n";
     }
@@ -129,9 +129,9 @@ while (($row = fgetcsv($file)) !== false) {
 
 fclose($file);
 
-echo "\n\e[33m--- Resumen de Resultados ---\e[0m\n";
-echo "Total de pruebas: {$total}\n";
-echo "Pasadas:          \e[32m{$passed}\e[0m\n";
-echo "Fallidas:         " . ($failed > 0 ? "\e[31m{$failed}\e[0m" : "0") . "\n\n";
+echo "\n\e[33m--- Results Summary ---\e[0m\n";
+echo "Total tests: {$total}\n";
+echo "Passed:      \e[32m{$passed}\e[0m\n";
+echo "Failed:      " . ($failed > 0 ? "\e[31m{$failed}\e[0m" : "0") . "\n\n";
 
 exit($failed > 0 ? 1 : 0);

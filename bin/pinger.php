@@ -107,7 +107,7 @@ while (($row = fgetcsv($file)) !== false) {
     $textMatches = true;
 
     if ($containsText !== '') {
-        $textMatches = (stripos($response, $containsText) !== false);
+        $textMatches = (is_string($response) && stripos($response, $containsText) !== false);
     }
 
     if ($statusMatches && $textMatches) {

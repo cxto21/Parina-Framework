@@ -7,6 +7,10 @@ filter:
 
 # Say to Scrutinizer to use pre-installed PHP instead of compiling one
 build:
+    dependencies:
+        before:
+            # Download PHPUnit to analize tests
+            - wget https://phar.phpunit.de/phpunit-9.phar -O phpunit.phar
     environment:
         php:
             version: '8.2' 

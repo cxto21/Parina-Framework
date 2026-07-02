@@ -13,10 +13,12 @@ build:
             - wget https://phar.phpunit.de/phpunit-9.phar -O phpunit.phar
     environment:
         php:
-            version: '8.2' 
-            bootstrap_file: src/autoload.php
+            version: '8.2'             
     nodes:
         analysis:
             tests:
                 override:
                     - php-scrutinizer-run
+checks:
+    php:
+        bootstrap_file: src/autoload.php

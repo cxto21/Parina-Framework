@@ -3,7 +3,9 @@ tools:
 
 filter:
     excluded_paths:
-        - 'vendor/*'
+        - 'vendor/*'    
+    dependency_paths:
+        - 'phpunit.phar'
 
 # Say to Scrutinizer to use pre-installed PHP instead of compiling one
 build:
@@ -23,6 +25,3 @@ build:
         override:
             # Scrutinizer tests using kiss autoloader
             - command: 'php phpunit.phar --bootstrap src/autoload.php'
-filter:
-    dependency_paths:
-        - 'phpunit.phar'

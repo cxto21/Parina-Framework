@@ -19,6 +19,10 @@ build:
             tests:
                 override:
                     - php-scrutinizer-run
-checks:
-    php:
-        bootstrap_file: src/autoload.php
+    tests:
+        override:
+            # Scrutinizer tests using kiss autoloader
+            - command: 'php phpunit.phar --bootstrap src/autoload.php'
+filter:
+    dependency_paths:
+        - 'phpunit.phar'

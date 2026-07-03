@@ -192,6 +192,8 @@ Qual é a menor estrutura que ainda funciona de forma correta, segura e rápida?
 
 O Parina não é minimalista por limitação. É minimalista por intenção. Ele remove tudo o que você realmente não precisa.
 
+Para uma explicação detalhada da filosofia principal e de como todo o framework cabe no diagrama de um guardanapo de papel, consulte [THE-NAPKIN-REVOLUTION.pt.md](THE-NAPKIN-REVOLUTION.pt.md).
+
 ---
 
 ## 📦 Implantação & Instalação

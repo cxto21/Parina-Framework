@@ -192,6 +192,8 @@ La mayor parte de la complejidad en el software es accidental. Parina se pregunt
 
 Parina no es minimalista por limitación. Es minimalista por intención. Elimina todo lo que realmente no necesitas.
 
+Para obtener una explicación detallada de la filosofía principal y cómo todo el framework cabe en el diagrama de una servilleta de papel, consulta [THE-NAPKIN-REVOLUTION.es.md](THE-NAPKIN-REVOLUTION.es.md).
+
 ---
 
 ## 📦 Despliegue e Instalación

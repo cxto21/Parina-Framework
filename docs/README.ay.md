@@ -192,6 +192,8 @@ Taqi ch'axwawinakax ina ch'amawa. Parina jiskt'i:
 
 Parinaqa janiw juk'akiti pisichawitaki. Amtapuni phiskhu uñch'ukita. Mayjt'ayi taqi ina ch'ama ch'axwawinaka.
 
+Framework ukan taqpach lurañapax kunjams jisk'a servilleta papel diagraman utji ukatx yatichaw aski uñjañatakix, uñjama [THE-NAPKIN-REVOLUTION.ay.md](THE-NAPKIN-REVOLUTION.ay.md).
+
 ---
 
 ## 📦 Deployment & Installation

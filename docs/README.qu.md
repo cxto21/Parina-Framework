@@ -192,6 +192,8 @@ Tukuy ch'aqwaqa mana allin ch'amapaqmi. Parinaqa tapukunmi:
 
 Parinaqa manam huch'uyllachu pisillapaq. Yuyaypi k'apak allichasqam. Ruraqkunamanmi ch'ampayta qun allin yuyaywan hatarichinankupaq.
 
+Framework llikachapa kikin amtanpaq hinaspa imaynas huk servilletapa diagramanpi churanapaq allin yachachiyta qhawanapaq, uñay [THE-NAPKIN-REVOLUTION.qu.md](THE-NAPKIN-REVOLUTION.qu.md).
+
 ---
 
 ## 📦 Deployment & Installation

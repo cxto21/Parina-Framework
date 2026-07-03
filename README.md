@@ -192,6 +192,8 @@ What is the smallest structure that still works correctly, securely, and fast?
 
 Parina is not minimal by limitation. It is minimal by intention. It removes everything you do not actually need.
 
+For a detailed explanation of the core philosophy and how the entire framework fits in a paper napkin diagram, see [THE-NAPKIN-REVOLUTION.md](THE-NAPKIN-REVOLUTION.md).
+
 ---
 
 ## 📦 Deployment & Installation

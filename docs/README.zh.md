@@ -192,6 +192,8 @@ tests/
 
 Parina 不是因能力有限而极简，而是有意为之。它移除了你并不真正需要的一切。
 
+有关核心哲学以及整个框架如何容纳在餐巾纸图表中的详细说明，请参阅 [THE-NAPKIN-REVOLUTION.zh.md](THE-NAPKIN-REVOLUTION.zh.md)。
+
 ---
 
 ## 📦 部署与安装

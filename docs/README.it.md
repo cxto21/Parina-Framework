@@ -192,6 +192,8 @@ Qual è la struttura più piccola che funziona ancora correttamente, in modo sic
 
 Parina non è minimalista per limitazione. È minimalista per intenzione. Rimuove tutto ciò di cui non hai realmente bisogno.
 
+Per una spiegazione dettagliata della filosofia di fondo e di come l'intero framework trovi posto nel diagramma di un tovagliolo di carta, vedere [THE-NAPKIN-REVOLUTION.it.md](THE-NAPKIN-REVOLUTION.it.md).
+
 ---
 
 ## 📦 Distribuzione & Installazione

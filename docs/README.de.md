@@ -192,6 +192,8 @@ Was ist die kleinste Struktur, die immer noch korrekt, sicher und schnell funkti
 
 Parina ist nicht aus Mangel minimal. Es ist mit Absicht minimal. Es entfernt alles, was Sie eigentlich nicht benötigen.
 
+Eine detaillierte Erklärung der Kernphilosophie und wie das gesamte Framework in das Diagramm einer Papierservierte passt, finden Sie unter [THE-NAPKIN-REVOLUTION.de.md](THE-NAPKIN-REVOLUTION.de.md).
+
 ---
 
 ## 📦 Bereitstellung & Installation
